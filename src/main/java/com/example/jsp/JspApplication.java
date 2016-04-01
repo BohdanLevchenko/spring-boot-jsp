@@ -23,7 +23,7 @@ import static org.springframework.web.bind.annotation.RequestMethod.HEAD;
 public class JspApplication {
   private static final Logger LOGGER = LoggerFactory.getLogger(JspApplication.class);
 
-	public static void main(String[] args) throws UnknownHostException {
+  public static void main(String[] args) throws UnknownHostException {
     SpringApplication app = new SpringApplication(JspApplication.class);
     Environment env = app.run(args).getEnvironment();
     LOGGER.info("\n----------------------------------------------------------\n\t" +
@@ -34,7 +34,7 @@ public class JspApplication {
         env.getProperty("server.port"),
         InetAddress.getLocalHost().getHostAddress(),
         env.getProperty("server.port"));
-	}
+  }
 
   @RequestMapping(method = {GET, HEAD})
   String index(Model model) {
